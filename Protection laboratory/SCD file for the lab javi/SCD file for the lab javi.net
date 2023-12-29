@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SFT2841NetworkConfiguration xmlns="http://www.schneider-electric.com/SFT2841_NET" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.schneider-electric.com/SFT2841_NET SFT2841_NET.xsd">
+	<ConfigurationIdentity>
+	  <ConfigurationDate>2023-12-20</ConfigurationDate>
+    <ProductName>SFT2841</ProductName>
+    <CompanyName>Schneider Electric</CompanyName>
+    <ProductRange>SEPAM</ProductRange>
+  </ConfigurationIdentity>
+	<ModelHeader>
+	  <ModelIdentification>SFT2841 Data Model</ModelIdentification>
+    <ModelVersion>2</ModelVersion>
+    <ModelRevision>0</ModelRevision>
+    <ModelDate>2008-11-07</ModelDate>
+    <ModelName>Data Model of SFT2841 Sepam network compatible with SFT850 v2.0</ModelName>
+  </ModelHeader>
+  <RootTcpNetwork CommunicationModel="IEC61850" protocol="ModbusTCP">
+    <IEC61850Edition revision="" version=""/>
+    <DeviceList>
+      <Device application="S82" deviceFamily="series 80" deviceId="1" protocol="ModbusTCP" rangeName="Sepam" version="600">
+        <ProcessName>S11_publisher</ProcessName>
+        <ICDfile>s80/SE_Sepam_S82-F03_E1V08.icd</ICDfile>
+        <CIDfile>cid/S11_publisher.cid</CIDfile>
+      </Device>
+      <Device application="S82" deviceFamily="series 80" deviceId="2" protocol="ModbusTCP" rangeName="Sepam" version="600">
+        <ProcessName>S12_receiver</ProcessName>
+        <ICDfile>s80/SE_Sepam_S82-F03_E1V08.icd</ICDfile>
+        <CIDfile>cid/S12_receiver.cid</CIDfile>
+      </Device>
+    </DeviceList>
+    <DeviceAddressList>
+      <DeviceAddress deviceId="1" networkAddress="169.254.0.10" retries="3" timeout="1000"/>
+      <DeviceAddress deviceId="2" networkAddress="169.254.0.11" retries="3" timeout="1000"/>
+    </DeviceAddressList>
+  </RootTcpNetwork>
+</SFT2841NetworkConfiguration>
